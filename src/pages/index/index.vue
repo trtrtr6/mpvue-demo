@@ -1,9 +1,9 @@
 <template>
   <view>
-    <circle :size="100" canvasId="circle" :percentage="count">
-      <span>中间层</span>
+    <circle :sizeRpx="200" canvasId="circle" :percentage="count">
+      <span style="font-size:30rpx;">中间层</span>
     </circle>
-    <circle :size="200" canvasId="circle2" :percentage="count">
+    <circle :sizeRpx="400" canvasId="circle2" :percentage="count">
       <span>中间层2</span>
     </circle>
   </view>
@@ -33,7 +33,7 @@ export default {
         } else {
           clearInterval(this.countTimer)
         }
-      }, 100)
+      }, 50)
     }
   },
   mounted () {

@@ -19,7 +19,7 @@ export default {
       type: String,
       default: 'circle'
     },
-    size: {
+    sizeRpx: {
       type: Number,
       default: 100
     },
@@ -47,6 +47,9 @@ export default {
   computed: {
     canvasSize () {
       return `width:${this.size}px;height:${this.size}px`
+    },
+    size () {
+      return wx.getSystemInfoSync().windowWidth / 750 * parseInt(this.sizeRpx)
     }
   },
   methods: {
